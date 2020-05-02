@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1><ul></ul>User Information</h1>
+    <form name="firstForm">
+        <input type="text" name="name" placeholder="Enter Name(autofocus/complete-on)" autofocus autocomplete="on" />
+        <input type="email" name="email" placeholder="Enter email(dbs or hcl) use pattern" required pattern="[A-Za-z0-9]*.[dbs.com]" />
+        <input list="skills" placeholder="SkillSet" />
+        <datalist id="skills">
+            <option>Java</option>
+            <option>.Net</option>
+            <option>embed systems</option>
+        </datalist>
+        <select multiple placeholder="Enter language">
+            <option>telugu</option>
+            <option>hindi</option>
+            <option>english</option>
+        </select>
+        <input type="number" min="1" max="100" step="10" id="mynumber" placeholder="Enter Age">
+        <input type="text" placeholder="Enter PAN Number">
+        <input type="submit" value="SUBMIT" />
+        <input class="rest-button" type="reset" value="Reset" />
+    </form>
+</body>
+</html>

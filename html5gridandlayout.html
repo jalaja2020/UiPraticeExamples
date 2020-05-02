@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layouts and grids</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: left;
+            font-size: 35px;
+            color: blue;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+       
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: white;
+            padding: 10px;
+            grid-column-gap: 50px;
+            grid-row-gap: 10px;
+        }
+
+        .grid-item {
+            background-color: blue;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+		
+		
+/* Float four columns side by side */
+.header-column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.header-row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.header-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .header-column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.header-list {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width:30%
+  padding: 5px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+		
+		
+		
+    </style>
+</head>
+<body>
+
+    <header>
+		
+<div class="header-row">
+  <div class="header-column">
+    <div class="header-list">
+      <h3>Home</h3>
+     
+    </div>
+  </div>
+
+  <div class="header-column">
+    <div class="header-list">
+      <h3>About us</h3>
+      
+    </div>
+  </div>
+  
+  <div class="header-column">
+    <div class="header-list">
+      <h3>DashBoard</h3>
+    </div>
+  </div>
+  
+ 
+</div>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">My Tasks</a></li>
+                <li><a href="#">Team tasks</a></li>
+                <li><a href="#">All tasks</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>@copyright 2020</p>
+    </footer>
+
+</body>
+</html>

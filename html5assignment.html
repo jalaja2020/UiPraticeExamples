@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <table border="1">
+        <th colspan="2" align="center"><h3>Employee Registration form</h3></th>
+        <tr><td>Firstname:</td><td><input type="text" name="firstName" required /></td></tr>
+        <tr><td>Lastname:</td><td><input type="text" name="lastName" /></td></tr>
+        <tr colspan="2">
+            <td>Gender:</td>
+            <td>
+                <input type="radio" id="m" name="gender" align="left"><span>Male</span>
+                <input type="radio" id="f" name="gender"><span>Female</span>
+            </td>
+        </tr>
+        <tr><td>Date of Birth:</td><td><input name="meeting" type="date" value="2011-01-13" /></td></tr>
+        <tr>
+            <td>Skillset</td>
+            <td>
+                <input list="skillset">
+                <datalist id="skillset">
+                    <option value="Java">
+                    <option value=".net">
+                    <option value="embeded systems">
+                    <option value="networks">
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>
+                <textarea id="address" rows="3" cols="20" placeholder="Address">
+            housenumber
+            street
+            state
+            city
+             </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Hobbies:
+            </td>
+            <td>
+                <select multiple>
+                    <option>Listining</option>
+                    <option>drawing</option>
+                    <option>playing</option>
+                    <option>painintg</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input type="email" autocomplete="on" name="email" placeholder="Enter email id" required pattern="[A-Za-z0-9]*.[hcl.com]" />
+            </td>
+        </tr>
+
+        <tr><td>Upload resume</td><td><input type="file" value="browse" id="browse" /></td></tr>
+
+        <tr><td>Comments</td><td colspan="2"><input type="text" /></td></tr>
+        <tr>
+            <td>
+                Search :
+            </td>
+            <td>
+                <input type="search" id="mysearch"><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                vedio message :
+            </td>
+            <td>
+                <video width="300" height="300" controls autoplay>
+                    <source src="C:\Users\jalaja\vedio file\test.mp4" type="video/Mp4" />
+                </video>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Audio message :
+            </td>
+            <td>
+                <audio controls>
+                    <source src="horse.mp3" type="audio/mpeg">
+                </audio>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Company URL :
+            </td>
+            <td>
+                <input type="url" id="myurl" placeholder="Enter Company URL">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Proficiency range(volume between 1 to 50):
+            </td>
+            <td>
+                Low <input type="range" min="1" max="80" step="0.5" id="range">   High
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Register" />
+                <button type="reset" value="Reset">Reset</button>
+            </td>
+        </tr>
+    </table>
+    <img src="E:\UIassignment\hcl logo.png" alt="Smiley face" width="42" height="42">
+   
+</body>
+<style>
+    td {
+        width: 250px;
+    }
+
+    input {
+        width: 190px;
+    }
+
+    select {
+        width: 190px;
+    }
+</style>
+</html>
