@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layouts and grids</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 10px;
+            text-align: left;
+            font-size: 35px;
+            color: blue;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            background-color: white;
+            padding: 10px;
+            grid-column-gap: 50px;
+            grid-row-gap: 10px;
+        }
+
+        .grid-item {
+            background-color: blue;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+           
+        }
+            .grid-item:hover {
+                box-shadow: 0 0 0 5px steelblue;
+            }
+
+     
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+            .header-column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <form class="example" action="#" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search2">
+            <button type="submit">search</button>
+        </form>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">My Tasks</a></li>
+                <li><a href="#">Team tasks</a></li>
+                <li><a href="#">All tasks</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <div class="grid-container">
+                <div class="grid-item"> <img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+                <div class="grid-item"><img src="E:\UIassignment\css.jpg" width="42" height="42" /></div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>@copyright 2020</p>
+    </footer>
+
+</body>
+</html>
